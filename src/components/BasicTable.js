@@ -3,8 +3,7 @@ import EditIcon from "@mui/icons-material/Edit"
 import DeleteIcon from "@mui/icons-material/Delete"
 const api =
   "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json"
-function BasicTable() {
-  const [data, setData] = useState([])
+function BasicTable({ data, setData }) {
   useEffect(() => {
     fetch(api)
       .then((res) => res.json())
@@ -17,7 +16,6 @@ function BasicTable() {
   const handleData = () => {}
   const handleId = () => {}
   return (
-    
     <div className="overflow-auto   mx-10 mt-10 mb-20 ">
       <table className="items-center w-full rounded-lg shadow-md  px-3 ">
         <thead className="bg-gradient-to-r bg-teal-800 hover:bg-teal-700 text-gray-100 rounded-lg">
