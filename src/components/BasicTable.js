@@ -17,39 +17,14 @@ function BasicTable() {
   const handleData = () => {}
   const handleId = () => {}
   return (
-    // <div>
-    // {data.map((d, i) => (
-    //   <div key={i}>{d.name}</div>
-    // ))}
-    // </div>
-    // <div>
-    //   <table>
-    //     <thead>
-    //       <tr>
-    //         <th>Name</th>
-    //         <th>Email</th>
-    //         <th>Role</th>
-    //         <th>Edit</th>
-    //         <th>Delete</th>
-    //       </tr>
-    //     </thead>
-    //     <tbody>
-    //       {data.map((d, i) => (
-    //         <tr key={i}>
-    //           <th>{d.name}</th>
-    //           <th>{d.email}</th>
-    //           <th>{d.role}</th>
-    //           <th><EditIcon/></th>
-    //           <th><DeleteIcon/></th>
-    //         </tr>
-    //       ))}
-    //     </tbody>
-    //   </table>
-    // </div>
+    
     <div className="overflow-auto   mx-10 mt-10 mb-20 ">
       <table className="items-center w-full rounded-lg shadow-md  px-3 ">
         <thead className="bg-gradient-to-r bg-teal-800 hover:bg-teal-700 text-gray-100 rounded-lg">
           <tr>
+            <th className="px-2 border-b border-solid border-gray-300 py-3 text-sm font-serif font-bold text-left pl-10">
+              Index
+            </th>
             <th className="px-2 border-b border-solid border-gray-300 py-3 text-sm font-serif font-bold text-left pl-10">
               Name
             </th>
@@ -71,6 +46,9 @@ function BasicTable() {
           {data &&
             data?.map((d, index) => (
               <tr key={index}>
+                <th className="px-2 border-b border-solid border-gray-300 py-3 text-sm font-serif font-light text-left pl-10">
+                  {d.id}
+                </th>
                 <th className="px-2 border-b border-solid border-gray-300 py-3 text-sm font-serif font-light text-left pl-10">
                   {d.name}
                 </th>
